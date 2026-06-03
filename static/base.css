@@ -54,6 +54,12 @@ img {
     /*跟隨容器縮放*/
 }
 
+body {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-family: "Noto Sans", sans-serif;
+}
+
 a {
     text-decoration: none;
     /* 不要下引線 */
@@ -78,8 +84,6 @@ a {
     font-size: 20px;
     display: block;
 }
-
-
 
 /*typography系統-從figma的guideline去看*/
 /* Display - font-weight: 700 */
