@@ -34,6 +34,19 @@
     /*方便計算像素*/
 }
 
+input,
+textarea,
+button {
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+}
+
+textarea {
+    resize: none;
+}
+
 img {
     vertical-align: middle;
     /*讓圖片垂直對齊*/
@@ -46,7 +59,13 @@ a {
     /* 不要下引線 */
     color: inherit;
     /* 繼承父層顏色 */
+    display: block;
 }
+
+.nav-list {
+    display: flex;
+}
+
 
 /* google icon 預設設定 */
 
@@ -79,7 +98,7 @@ a {
 /* Heading - font-weight: 700 */
 
 .heading-xxxl {
-    font-size: clamp(2.5rem, 1.893rem + 2.589vw, 5rem);
+    font-size: 80px;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -163,15 +182,158 @@ a {
     font-weight: 500;
 }
 
+/*helper樣式*/
+.sticky-top {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+
 /*通用樣式*/
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.bg-neutral-0 {
+    background-color: var(--color-neutral-0);
+}
+
+.bg-primary-50 {
+    background-color: var(--color-primary-50);
+}
+
+.bg-primary-900 {
+    background-color: var(--color-primary-900);
+}
+
+.text-neutral-700 {
+    color: var(--color-neutral-700);
+}
+
+.text-neutral-0 {
+    color: var(--color-neutral-0);
+}
+
 .d-flex {
     display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.gap-8 {
+    gap: 8px;
+}
+
+.gap-12 {
+    gap: 12px;
+}
+
+.gap-24 {
+    gap: 24px;
 }
 
 .ml-auto {
     margin-left: auto;
 }
 
+.mb-4 {
+    margin-bottom: 4px;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}
+
+.mb-92 {
+    margin-bottom: 92px;
+}
+
+
+.p-12 {
+    padding: 12px;
+}
+
+.px-12 {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.px-32 {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.px-40 {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.py-4 {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.py-12 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.py-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.py-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.text-24 {
+    font-size: 24px;
+}
+
+.rounded-full {
+    border-radius: 1000px;
+}
+
+.rounded-40 {
+    border-radius: 40px;
+}
+
+.btn-outline {
+    border: 1px solid currentColor;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.z-1 {
+    z-index: 1;
+}
+
+.relative {
+    position: relative;
+}
 
 .container {
     max-width: 1320px;
@@ -220,4 +382,67 @@ a {
     --span: 12;
     --gap-count: calc(var(--span) - 1);
     width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+}
+
+
+@media (max-width: 992px) {
+
+    .col-md-12 {
+        --span: 12;
+        --gap-count: calc(var(--span) - 1);
+        width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+    }
+
+    .d-md-block {
+        display: block;
+    }
+
+    .d-md-none {
+        display: none;
+    }
+
+    .label-mobile-sm {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .w-md-full {
+        width: 100%;
+    }
+
+    .flex-md-col {
+        flex-direction: column;
+    }
+
+    /*行動版預設關閉 */
+    .nav-list {
+        display: none;
+    }
+
+    /*行動版打開狀態 */
+    .nav-list.active {
+        padding: 12px 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0px;
+        background-color: var(--color-primary-50);
+        width: 100%;
+        text-align: center;
+        gap: 12px;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    body.menu-open .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-dark-60a);
+    }
 }

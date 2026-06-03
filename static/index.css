@@ -1,0 +1,4 @@
+.contact-input-half {
+    --gap: 24px;
+    width: calc((100% - var(--gap)) / 2);
+}

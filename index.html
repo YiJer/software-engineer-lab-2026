@@ -5,56 +5,116 @@
     <meta charset="UTF-8"><!--中文網頁一定要有的-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--讓手機也能輕鬆閱讀-->
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_outward" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!--google icon-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!--bootstrap icon-->
-    <link rel=”stylesheet” herf=”.static/reset.css” />
-    <link rel=”stylesheet” herf=”.static/base.css” />
-    <link rel=”stylesheet” herf=”.static/index.css” />
+    <link rel="stylesheet" href="./static/reset.css" />
+    <link rel="stylesheet" href="./static/base.css" />
+    <link rel="stylesheet" href="./static/index.css" />
     <title>Document</title>
 </head>
 
 <body>
-    <header>
+    <!--遮罩使用-->
+    <div class="mask"></div>
+
+    <!--首頁區域-->
+    <header class="bg-primary-50 z-1 sticky-top">
         <nav>
             <div class="container"><!--網格系統用-->
-                <!--logo-->
-                <a href="#">
-                    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/0163848842b749c38a767e05caabbbd18d2f6dc9/2026-web-camp/device-pc.svg"
-                        alt="Nelson" />
-                </a>
-                <!-- 導覽列選單 -->
-                <ul class="ml-auto">
-                    <li><a href="#">服務項目</a></li>
-                    <li><a href="#">專案作品</a></li>
-                    <li><a href="#">部落格</a></li>
-                    <li><a href="#">與我聯絡</a></li>
-                </ul>
+                <div class="d-flex py-12 align-items-center">
+                    <!--logo-->
+                    <a href="#">
+                        <picture>
+                            <source media="(max-width:992px)"
+                                srcset="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/0163848842b749c38a767e05caabbbd18d2f6dc9/2026-web-camp/device-mobile.svg">
+                            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/0163848842b749c38a767e05caabbbd18d2f6dc9/2026-web-camp/device-pc.svg"
+                                alt="Nelson" />
+
+                        </picture>
+                    </a>
+                    <!--行動版-漢堡選單按鈕-->
+                    <button class="menu-btn d-none d-md-block ml-auto p-12" type="button" aria-label="選單">
+                        <span class="material-symbols-outlined">dehaze</span>
+                    </button>
+                    <!-- 導覽列選單 -->
+                    <ul
+                        class="nav-list label-mobile-sm ml-auto d-flex label-md text-neutral-700 gap-24 align-items-center ">
+                        <li class="w-md-full"><a class="px-12 py-4" href="#">服務項目</a></li>
+                        <li class="w-md-full"><a class="px-12 py-4" href="#">專案作品</a></li>
+                        <li class="w-md-full"><a class="px-12 py-4" href="#">部落格</a></li>
+                        <li class="w-md-full"><a class="px-12 py-4" href="#">與我聯絡</a></li>
+                    </ul>
+                </div><!--d-flex-->
             </div><!--container-->
         </nav>
     </header>
 
-
-    <div class="footer">
+    <!--頁尾區域-->
+    <footer class="bg-primary-900 text-neutral-0 py-80">
         <div class="container">
-            <div class="left">
-                <p>聯絡我們</p>
-                <span>CONTACT</span>
-                <p>若有數位產品設計和開發相關問題</br>歡迎填寫表單 或 直接與我們聯絡!</p>
-                <div class="mediaIcons">
-                    <a href="">ig</a>
-                    <a href="">line</a>
-                    <a href="">in</a>
+            <div class="d-flex flex-md-col">
+                <!--聯絡資訊區塊-->
+                <div class="col-5 col-md-12">
+                    <!--標題-->
+                    <h2 class="mb-24">
+                        <span class="d-block heading-xxxs">聯絡我們</span>
+                        <span class="d-block heading-xxxl">CONTACT</span>
+                    </h2>
+                    <!--內文-->
+                    <p class="paragraph-md mb-4">若有數位產品設計和開發相關問題</p>
+                    <p class="paragraph-md mb-92">歡迎填寫表單 或 直接與我們聯絡!</p>
+
+                    <div class="d-block d-md-none">
+                        <!--social icon列表-->
+                        <div class="d-flex line-height-1  mb-24 gap-12">
+                            <a href="#" class="bi bi-instagram text-24 p-12 btn-outline rounded-full"><i></i></a>
+                            <a href="#" class="bi bi-line text-24 p-12 btn-outline rounded-full"><i></i></a>
+                            <a href="#" class="bi bi-linkedin text-24 p-12 btn-outline rounded-full"><i></i></a>
+                        </div>
+                        <!--信箱資訊-->
+                        <a class="d-flex gap-8" href="mailto:service@hexschool.com">
+                            <span class="material-symbols-outlined">drafts</span>
+                            <p class="paragraph-md">service@hexschool.com</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="mail">
-                    <p>iconMail</p>
-                    service@hexschool.com
-                    </p>
+                <!--表單區塊-->
+                <div class="col-7 col-md-12">
+                    <form class="d-flex flex-wrap gap-24 px-40 paragraph-md">
+                        <input class="contact-input-half btn-outline rounded-40 py-20 px-32" type="text"
+                            placeholder="姓名">
+                        <input class="contact-input-half btn-outline rounded-40 py-20 px-32" type="tel"
+                            placeholder="手機號碼">
+                        <input class="btn-outline rounded-40 w-full py-20 px-32" type="email" placeholder="電子信箱">
+                        <textarea class="btn-outline rounded-40 w-full py-20 px-32" rows="4"
+                            placeholder="備註"></textarea>
+                        <button class="label-md bg-neutral-0 text-neutral-700 py-12 w-full text-center rounded-full"
+                            type="submit">送出</button>
+                    </form>
+                </div>
+
+                <!--行動裝置版本-->
+                <div class="d-none d-md-block py-40">
+                    <!--social icon列表-->
+                    <div class="d-flex line-height-1  mb-24 gap-12">
+                        <a href="#" class="bi bi-instagram text-24 p-12 btn-outline rounded-full"><i></i></a>
+                        <a href="#" class="bi bi-line text-24 p-12 btn-outline rounded-full"><i></i></a>
+                        <a href="#" class="bi bi-linkedin text-24 p-12 btn-outline rounded-full"><i></i></a>
+                    </div>
+                    <!--信箱資訊-->
+                    <a class="d-flex gap-8" href="mailto:service@hexschool.com">
+                        <span class="material-symbols-outlined">drafts</span>
+                        <p class="paragraph-md">service@hexschool.com</p>
+                    </a>
                 </div>
             </div>
-            <div class="right"></div>
         </div>
-    </div><!--footer-->
+    </footer>
+
+    <!--js-->
+    <script src="./index.js"></script>
+</body>
 
 </html>
