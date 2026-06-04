@@ -20,7 +20,7 @@
     <div class="mask"></div>
 
     <!--首頁區域-->
-    <header class="bg-primary-50 z-1 sticky-top">
+    <header class="bg-primary-50 sticky-top z-999">
         <nav>
             <div class="container"><!--網格系統用-->
                 <div class="d-flex py-12 align-items-center">
@@ -51,20 +51,83 @@
         </nav>
     </header>
 
+    <!--hero區域-->
+    <section class="bg-primary-50">
+        <div class="container h-full px-0">
+            <div class="d-flex text-neutral-700 flex-md-col py-md-24 h-full">
+                <div class="col-5 col-md-12 order-md-2 py-md-24 z-3 d-flex relative">
+                    <!--星芒裝飾圖-->
+                    <div class="deco-shape-4 absolute z-2">
+                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_3.png?raw=true"
+                            alt="">
+                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_4.png?raw=true"
+                            alt="">
+                    </div>
+                    <div class="deco-shape-5 absolute z-2">
+                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_5.png?raw=true"
+                            alt="">
+                        <img class="w-80 absolute top-50"
+                            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_3.png?raw=true"
+                            alt="">
+                    </div>
+                    <!--圖片資訊-->
+                    <div class="d-flex my-auto px-12 z-999">
+                        <!--內容區塊-->
+                        <div>
+                            <!--標題-->
+                            <h1 class="mb-24 heading-xxxl heading-mobile-xl mb-md-12">
+                                <span class="d-block">Hello </span>
+                                <span class="d-block">I'm Nelson</span>
+                            </h1>
+
+                            <!--內文-->
+                            <p class="paragraph-md mb-4 paragraph-mobile-sm">我是一個擁有10年經驗的 UIUX 設計師 和 前端工程師</p>
+                            <p class="paragraph-md mb-60 paragraph-mobile-sm mb-md-32">喜歡把美學和程式結合，打造一個又一個精美的網頁設計!</p>
+                            <div class="label-md label-mobile-sm">
+                                <button
+                                    class="button py-12 px-24 text-neutral-0 bg-neutral-700 rounded-full mr-24 mb-mr-12"
+                                    type="button">與我聯絡</button>
+                                <button class="button py-12 px-24 btn-outline rounded-full" type="button">我的履歷</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 col-md-12 order-md-1 mb-md-24 min-h-0 h-full relative">
+                    <!--裝飾圖片-->
+                    <img class="deco-shape-1 absolute z-2"
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_1.png?raw=true" />
+                    <img class="deco-shape-2 absolute z-2"
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_2.png?raw=true" />
+                    <img class="deco-shape-3 absolute z-2"
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_3.png?raw=true" />
+                    <!--人像圖片-->
+                    <div>
+                        <img class="object-fit-cover hero-mix-width"
+                            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_person.png?raw=true"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+
     <!--頁尾區域-->
-    <footer class="bg-primary-900 text-neutral-0 py-80">
+    <footer class="bg-primary-900 text-neutral-0 py-80 py-md-40 px-md-12">
         <div class="container">
             <div class="d-flex flex-md-col">
                 <!--聯絡資訊區塊-->
                 <div class="col-5 col-md-12">
                     <!--標題-->
                     <h2 class="mb-24">
-                        <span class="d-block heading-xxxs">聯絡我們</span>
-                        <span class="d-block heading-xxxl">CONTACT</span>
+                        <span class="d-block heading-xxxs heading-mobile-xxxxs">聯絡我們</span>
+                        <span class="d-block heading-xxxl heading-mobile-xl ">CONTACT</span>
                     </h2>
                     <!--內文-->
-                    <p class="paragraph-md mb-4">若有數位產品設計和開發相關問題</p>
-                    <p class="paragraph-md mb-92">歡迎填寫表單 或 直接與我們聯絡!</p>
+                    <p class="paragraph-md mb-4 paragraph-mobile-sm">若有數位產品設計和開發相關問題</p>
+                    <p class="paragraph-md mb-92 paragraph-mobile-sm">歡迎填寫表單 或 直接與我們聯絡!</p>
 
                     <div class="d-block d-md-none">
                         <!--social icon列表-->
@@ -76,13 +139,13 @@
                         <!--信箱資訊-->
                         <a class="d-flex gap-8" href="mailto:service@hexschool.com">
                             <span class="material-symbols-outlined">drafts</span>
-                            <p class="paragraph-md">service@hexschool.com</p>
+                            <p class="paragraph-md paragraph-mobile-sm">service@hexschool.com</p>
                         </a>
                     </div>
                 </div>
                 <!--表單區塊-->
                 <div class="col-7 col-md-12">
-                    <form class="d-flex flex-wrap gap-24 px-40 paragraph-md">
+                    <form class="d-flex flex-wrap gap-24 px-40 paragraph-md paragraph-mobile-sm">
                         <input class="contact-input-half btn-outline rounded-40 py-20 px-32" type="text"
                             placeholder="姓名">
                         <input class="contact-input-half btn-outline rounded-40 py-20 px-32" type="tel"
@@ -90,7 +153,8 @@
                         <input class="btn-outline rounded-40 w-full py-20 px-32" type="email" placeholder="電子信箱">
                         <textarea class="btn-outline rounded-40 w-full py-20 px-32" rows="4"
                             placeholder="備註"></textarea>
-                        <button class="label-md bg-neutral-0 text-neutral-700 py-12 w-full text-center rounded-full"
+                        <button
+                            class="label-md label-mobile-sm bg-neutral-0 text-neutral-700 py-12 w-full text-center rounded-full"
                             type="submit">送出</button>
                     </form>
                 </div>

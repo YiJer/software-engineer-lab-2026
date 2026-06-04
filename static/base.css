@@ -193,7 +193,18 @@ a {
     left: 0px;
 }
 
+
+.object-fit-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /*通用樣式*/
+.h-full {
+    height: 100%;
+}
+
 .d-none {
     display: none;
 }
@@ -208,6 +219,10 @@ a {
 
 .bg-primary-50 {
     background-color: var(--color-primary-50);
+}
+
+.bg-neutral-700 {
+    background-color: var(--color-neutral-700);
 }
 
 .bg-primary-900 {
@@ -254,6 +269,14 @@ a {
     margin-bottom: 24px;
 }
 
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.mb-6-24 {
+    margin-bottom: 60px;
+}
+
 .mb-92 {
     margin-bottom: 92px;
 }
@@ -267,6 +290,12 @@ a {
     padding-left: 12px;
     padding-right: 12px;
 }
+
+.px-24 {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
 
 .px-32 {
     padding-left: 32px;
@@ -303,6 +332,10 @@ a {
     padding-bottom: 80px;
 }
 
+.pr-12 {
+    padding-right: 12px;
+}
+
 .text-24 {
     font-size: 24px;
 }
@@ -335,8 +368,28 @@ a {
     z-index: 1;
 }
 
+.z-2 {
+    z-index: 2;
+}
+
+.z-3 {
+    z-index: 3;
+}
+
+.z-999 {
+    z-index: 999;
+}
+
 .relative {
     position: relative;
+}
+
+.mr-24 {
+    margin-right: 24px;
+}
+
+.my-auto {
+    margin: auto 0px;
 }
 
 .container {
@@ -388,6 +441,13 @@ a {
     width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
 }
 
+.hero {
+    height: calc(100vh - 68px);
+}
+
+.line-height-1 {
+    line-height: 1;
+}
 
 @media (max-width: 992px) {
 
@@ -414,8 +474,72 @@ a {
         width: 100%;
     }
 
+    .min-h-0 {
+        min-height: 0px;
+    }
+
     .flex-md-col {
         flex-direction: column;
+    }
+
+    .order-md-1 {
+        order: 1;
+    }
+
+    .order-md-2 {
+        order: 2;
+    }
+
+    .heading-mobile-xl {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .heading-mobile-xxxxs {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .paragraph-mobile-sm {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .label-mobile-sm {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .mb-md-12 {
+        margin-bottom: 12px;
+    }
+
+    .mb-md-24 {
+        margin-bottom: 24px;
+    }
+
+    .mb-md-32 {
+        margin-bottom: 32px;
+    }
+
+    .mr-md-12 {
+        margin-right: 12px;
+    }
+
+    .py-md-24 {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .py-md-40 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .px-md-12 {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
     /*行動版預設關閉 */

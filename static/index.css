@@ -2,3 +2,50 @@
     --gap: 24px;
     width: calc((100% - var(--gap)) / 2);
 }
+
+.absolute {
+    position: absolute;
+}
+
+.deco-shape-1 {
+    top: 10%;
+    left: -80px;
+}
+
+.deco-shape-2 {
+    bottom: 10%;
+    right: -80px;
+}
+
+.deco-shape-3 {
+    top: 20%;
+    right: -170px;
+    width: 140px;
+}
+
+.deco-shape-4 {
+    top: 5%;
+    left: -220px;
+}
+
+.deco-shape-5 {
+    bottom: 12%;
+    right: 24%;
+}
+
+.top-50 {
+    top: -50%;
+}
+
+.w-80 {
+    width: 80px;
+}
+
+.hero-max-width {
+    max-width: 746px;
+}
+
+.px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
