@@ -49,3 +49,26 @@
     padding-left: 0px;
     padding-right: 0px;
 }
+
+@media (max-width: 992px) {
+    .deco-shape-1 {
+        width: 80px;
+        left: -20px;
+    }
+
+    .deco-shape-2 {
+        width: 80px;
+        right: -20px;
+    }
+
+    .deco-shape-3 {
+        /* 原本：right: -170px;
+    現在：往左拉回一點，才不會跑到螢幕外 */
+        right: -140px;
+        width: 100px;
+    }
+
+    .deco-shape-mobile-text {
+        right: 100px;
+    }
+}
