@@ -41,6 +41,14 @@
     padding: 24px;
 }
 
+.m-28 {
+    margin: 28px;
+}
+
+.p-40 {
+    padding: 40px;
+}
+
 .w-48 {
     width: 48px;
 }
@@ -58,13 +66,25 @@
     padding-right: 0px;
 }
 
-.gap-md-12 {
-    gap: 12px;
+
+.mw-386 {
+    max-width: 386px;
 }
 
-/* 水平滑動相關設定 (原先寫在外面，現在移到下方手機版專屬區域) */
+
+.project-content {
+    top: 50%;
+    left: 28px;
+    transform: translateY(-50%);
+}
+
 
 @media (max-width: 992px) {
+
+    .gap-md-12 {
+        gap: 12px;
+    }
+
     /* 水平滑動相關設定 (僅限手機版) */
     .overflow-x-md-auto {
         overflow-x: auto;
@@ -73,6 +93,7 @@
     .hide-md-scrollbar::-webkit-scrollbar {
         display: none;
     }
+
     .hide-md-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -102,10 +123,42 @@
 
     /* 在手機版強制卡片寬度，才不會被壓縮 */
     .card-mobile-w {
-        width: 80%; /* 手機版卡片寬度為螢幕的 80% */
+        width: 80%;
+        /* 手機版卡片寬度為螢幕的 80% */
     }
 
     .deco-shape-mobile-text {
         right: 100px;
+    }
+
+    /* 解決手機版圖片與文字方塊排版 */
+    .project-card {
+        /* 上面留空 280px，右下左皆為 16px */
+        padding: 280px 16px 16px 16px;
+    }
+
+    .project-card img {
+        /* 讓圖片變成背景，填滿整張卡片 */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        /* 確保不變形 */
+        object-fit: cover;
+    }
+
+    .project-content {
+        /* 取消絕對定位，回到正常的區塊排版，利用外層 padding 推擠 */
+        position: relative !important;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        z-index: 1;
+        /* 浮在圖片上面 */
     }
 }
