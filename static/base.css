@@ -83,6 +83,8 @@ a {
         "opsz" 24;
     font-size: 20px;
     display: block;
+    flex-shrink: 0;
+    /* 防止在 flex 容器中被壓縮變形 */
 }
 
 /*typography系統-從figma的guideline去看*/
@@ -213,6 +215,10 @@ a {
     display: block;
 }
 
+.d-inline-block {
+    display: inline-block;
+}
+
 .bg-neutral-0 {
     background-color: var(--color-neutral-0);
 }
@@ -281,6 +287,10 @@ a {
 
 .mb-4 {
     margin-bottom: 4px;
+}
+
+.mb-12 {
+    margin-bottom: 12px;
 }
 
 .mb-24 {
