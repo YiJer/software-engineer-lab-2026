@@ -37,6 +37,14 @@
     top: -50%;
 }
 
+.p-24 {
+    padding: 24px;
+}
+
+.w-48 {
+    width: 48px;
+}
+
 .w-80 {
     width: 80px;
 }
@@ -50,9 +58,33 @@
     padding-right: 0px;
 }
 
+.gap-md-12 {
+    gap: 12px;
+}
+
+/* 水平滑動相關設定 (原先寫在外面，現在移到下方手機版專屬區域) */
+
 @media (max-width: 992px) {
+    /* 水平滑動相關設定 (僅限手機版) */
+    .overflow-x-md-auto {
+        overflow-x: auto;
+    }
+
+    .hide-md-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-md-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .flex-md-shrink-0 {
+        flex-shrink: 0;
+    }
+
     .deco-shape-1 {
         width: 80px;
+        top: 5%;
         left: -20px;
     }
 
@@ -66,6 +98,11 @@
     現在：往左拉回一點，才不會跑到螢幕外 */
         right: -140px;
         width: 100px;
+    }
+
+    /* 在手機版強制卡片寬度，才不會被壓縮 */
+    .card-mobile-w {
+        width: 80%; /* 手機版卡片寬度為螢幕的 80% */
     }
 
     .deco-shape-mobile-text {
