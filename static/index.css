@@ -161,4 +161,20 @@
         z-index: 1;
         /* 浮在圖片上面 */
     }
+
+    /* 手機版字體設定 (Projects & Blogs) */
+    .heading-mobile-xs {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .paragraph-mobile-sm {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .label-mobile-sm {
+        font-size: 14px;
+        font-weight: 500;
+    }
 }
