@@ -722,3 +722,62 @@ a {
         z-index: 998;
     }
 }
+/* =========================================
+   UI Interactive States (Hover, Focus, Active)
+   ========================================= */
+
+/* --- 1. Buttons Base Transitions --- */
+.button, .btn, a.bi.btn-outline {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* --- 2. Button Hover States --- */
+/* Filled Dark Button */
+button.bg-neutral-700:hover, 
+.btn.bg-neutral-700:hover {
+    background-color: var(--color-neutral-900);
+}
+
+/* Filled Light Button */
+button.bg-neutral-0:hover, 
+.btn.bg-neutral-0:hover {
+    background-color: var(--color-primary-50);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Outline Buttons & Icon Buttons */
+button.btn-outline:hover, 
+.btn.btn-outline:hover,
+a.bi.btn-outline:hover {
+    background-color: var(--color-neutral-700);
+    color: var(--color-neutral-0) !important;
+}
+
+/* --- 3. Button Active States (Click Animation) --- */
+.button:active, 
+.btn:active, 
+a.bi.btn-outline:active {
+    transform: scale(0.95);
+    box-shadow: none;
+}
+
+/* --- 4. Text Fields (Inputs & Forms) Transitions --- */
+input.btn-outline, 
+textarea.btn-outline, 
+form.btn-outline {
+    transition: all 0.3s ease;
+}
+
+/* Remove default focus outlines to keep it clean */
+input.btn-outline:focus, 
+textarea.btn-outline:focus, 
+form.btn-outline:focus-within {
+    outline: none;
+}
+
+/* Remove default focus outlines for other inputs */
+input:focus, 
+textarea:focus {
+    outline: none;
+}
